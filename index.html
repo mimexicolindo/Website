@@ -1,297 +1,400 @@
-```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modelos Únicos | Moda artesanal mexicana</title>
+
+    <meta name="description"
+        content="Moda artesanal mexicana con diseños únicos, llenos de color e identidad.">
+
+    <meta name="keywords"
+        content="ropa artesanal mexicana, moda mexicana, boutique, vestidos mexicanos, Campeche">
+
+    <meta name="author" content="Modelos Únicos">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Modelos Únicos">
+    <meta property="og:description"
+        content="Descubre prendas y accesorios con identidad mexicana.">
+    <meta property="og:type" content="website">
+
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
 <body>
 
-  <header>
-    <img src="images/logo.svg" alt="Logo" class="logo">
+    <header>
 
-    <nav>
-      <a href="#coleccion">Colección</a>
-      <a href="#historia">Nuestra historia</a>
-      <a href="#instagram">Novedades</a>
-      <a href="#ubicacion">Ubicación</a>
-    </nav>
+        <div class="container">
 
-    <a href="#instagram" class="btn btn-primary">
-      Ver novedades
-    </a>
-  </header>
+            <div class="header-content">
 
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="Modelos Únicos">
+                </a>
 
-  <section class="hero">
-    <div class="container hero-content">
+                <nav>
+                    <a href="#coleccion">Colección</a>
+                    <a href="#historia">Historia</a>
+                    <a href="#instagram">Novedades</a>
+                    <a href="#ubicacion">Ubicación</a>
+                </nav>
 
-      <p class="small text-white">
-        Moda artesanal mexicana
-      </p>
+            </div>
 
-      <h1>
-        Color que cuenta historias.
-      </h1>
-
-      <p>
-        Descubre prendas y accesorios elaborados con identidad,
-        tradición y una visión contemporánea del diseño mexicano.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#coleccion" class="btn btn-primary">
-          Explorar colección
-        </a>
-
-        <a href="#ubicacion" class="btn btn-secondary">
-          Visítanos
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <section id="coleccion" class="bg-white">
-    <div class="container">
-
-      <div class="center mb-60">
-        <p class="text-pink">Colección destacada</p>
-
-        <h2>
-          Diseños únicos para personas únicas.
-        </h2>
-      </div>
-
-      <div class="card-grid card-grid-3">
-
-        <article class="card product-card">
-          <img src="images/producto-1.jpg" alt="">
-          <div class="card-content">
-            <h3>Vestidos</h3>
-
-            <p>
-              Siluetas contemporáneas inspiradas en la riqueza textil mexicana.
-            </p>
-          </div>
-        </article>
-
-        <article class="card product-card">
-          <img src="images/producto-2.jpg" alt="">
-          <div class="card-content">
-            <h3>Blusas</h3>
-
-            <p>
-              Piezas versátiles elaboradas con detalle artesanal.
-            </p>
-          </div>
-        </article>
-
-        <article class="card product-card">
-          <img src="images/producto-3.jpg" alt="">
-          <div class="card-content">
-            <h3>Accesorios</h3>
-
-            <p>
-              Complementos que celebran el color y la identidad mexicana.
-            </p>
-          </div>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <section id="historia" class="bg-cream">
-
-    <div class="container center">
-
-      <p class="text-pink">
-        Nuestra historia
-      </p>
-
-      <h2 class="mb-40">
-        México se viste de color.
-      </h2>
-
-      <p class="mb-20">
-        Creemos que cada prenda puede transmitir identidad,
-        tradición y orgullo por nuestras raíces.
-      </p>
-
-      <p>
-        En un mundo donde todo parece uniforme, apostamos
-        por el color, la autenticidad y el trabajo artesanal
-        como una forma de expresión.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <section class="bg-white">
-
-    <div class="container">
-
-      <div class="center mb-60">
-
-        <p class="text-pink">
-          ¿Por qué elegirnos?
-        </p>
-
-        <h2>
-          Mucho más que ropa.
-        </h2>
-
-      </div>
-
-      <div class="card-grid card-grid-3">
-
-        <div class="card">
-          <div class="card-content center">
-
-            <h3 class="mb-20">
-              Diseño auténtico
-            </h3>
-
-            <p>
-              Piezas que reflejan una visión contemporánea de México.
-            </p>
-
-          </div>
         </div>
 
-        <div class="card">
-          <div class="card-content center">
+    </header>
 
-            <h3 class="mb-20">
-              Elaboración artesanal
-            </h3>
 
-            <p>
-              Valoramos el detalle y el trabajo hecho con dedicación.
-            </p>
+    <main>
 
-          </div>
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <p class="small text-white">
+                        Moda artesanal mexicana
+                    </p>
+
+                    <h1>
+                        Color que cuenta historias.
+                    </h1>
+
+                    <p>
+                        Diseños inspirados en la riqueza cultural de México,
+                        creados para personas que buscan autenticidad.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#coleccion" class="btn btn-primary">
+                            Explorar colección
+                        </a>
+
+                        <a href="#ubicacion" class="btn btn-secondary">
+                            Visítanos
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COLECCIÓN -->
+        <section id="coleccion">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="text-pink">
+                        Colección destacada
+                    </p>
+
+                    <h2>
+                        Diseños únicos para personas únicas.
+                    </h2>
+
+                </div>
+
+
+                <div class="card-grid card-grid-3">
+
+                    <article class="card">
+
+                        <img src="images/producto-1.webp" alt="Vestidos">
+
+                        <div class="card-content">
+
+                            <h3>Vestidos</h3>
+
+                            <p>
+                                Siluetas contemporáneas inspiradas en la tradición mexicana.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <img src="images/producto-2.webp" alt="Blusas">
+
+                        <div class="card-content">
+
+                            <h3>Blusas</h3>
+
+                            <p>
+                                Prendas llenas de color para cualquier ocasión.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <img src="images/producto-3.webp" alt="Accesorios">
+
+                        <div class="card-content">
+
+                            <h3>Accesorios</h3>
+
+                            <p>
+                                Complementos que reflejan identidad y creatividad.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTORIA -->
+        <section id="historia" class="bg-cream">
+
+            <div class="container center">
+
+                <p class="text-pink">
+                    Nuestra historia
+                </p>
+
+                <h2>
+                    México se viste de color.
+                </h2>
+
+                <p>
+                    Creemos que la moda puede ser una expresión de identidad,
+                    tradición y orgullo por nuestras raíces.
+                </p>
+
+                <p>
+                    Mientras muchos siguen tendencias pasajeras,
+                    nosotros apostamos por diseños llenos de personalidad
+                    y autenticidad.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIFERENCIADORES -->
+        <section>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="text-pink">
+                        ¿Por qué elegirnos?
+                    </p>
+
+                    <h2>
+                        Mucho más que ropa.
+                    </h2>
+
+                </div>
+
+
+                <div class="card-grid card-grid-3">
+
+                    <div class="card">
+
+                        <div class="card-content center">
+
+                            <h3>Diseño auténtico</h3>
+
+                            <p>
+                                Piezas con identidad mexicana y visión contemporánea.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-content center">
+
+                            <h3>Modelos únicos</h3>
+
+                            <p>
+                                Constantemente incorporamos nuevas colecciones.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-content center">
+
+                            <h3>Experiencia cercana</h3>
+
+                            <p>
+                                Atención personalizada para ayudarte a encontrar tu estilo.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INSTAGRAM -->
+        <section id="instagram" class="newsletter">
+
+            <div class="container center">
+
+                <p>
+                    Nuestros modelos más recientes aparecen primero aquí.
+                </p>
+
+                <h2>
+                    Síguenos en Instagram.
+                </h2>
+
+                <a href="#" class="btn btn-primary">
+                    Ver Instagram
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- UBICACIÓN -->
+        <section id="ubicacion">
+
+            <div class="container center">
+
+                <p class="text-pink">
+                    Visítanos
+                </p>
+
+                <h2>
+                    Te esperamos en Campeche.
+                </h2>
+
+                <p>
+                    Descubre nuestras piezas en persona y encuentra el diseño ideal para ti.
+                </p>
+
+                <a href="#" class="btn btn-primary">
+                    Cómo llegar
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <h3>
+                        Modelos Únicos
+                    </h3>
+
+                    <p>
+                        Moda artesanal mexicana con identidad propia.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Explorar
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#coleccion">Colección</a>
+                        </li>
+
+                        <li>
+                            <a href="#historia">Historia</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Redes sociales
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#">Instagram</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Facebook</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="card">
-          <div class="card-content center">
-
-            <h3 class="mb-20">
-              Modelos únicos
-            </h3>
-
-            <p>
-              Constantemente incorporamos nuevas piezas y colecciones.
-            </p>
-
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section id="instagram" class="newsletter">
-
-    <div class="container">
-
-      <p>
-        Síguenos para conocer nuestros modelos más recientes.
-      </p>
-
-      <h2 class="mb-40">
-        Las novedades viven en Instagram.
-      </h2>
-
-      <a
-        href="#"
-        class="btn btn-primary"
-      >
-        Ir a Instagram
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <section id="ubicacion" class="bg-white">
-
-    <div class="container center">
-
-      <p class="text-pink">
-        Visítanos
-      </p>
-
-      <h2 class="mb-40">
-        Te esperamos.
-      </h2>
-
-      <p class="mb-20">
-        Campeche, México
-      </p>
-
-      <p class="mb-40">
-        Descubre nuestras piezas en persona.
-      </p>
-
-      <a href="#" class="btn btn-primary">
-        Cómo llegar
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <footer>
-
-    <div class="footer-grid">
-
-      <div>
-
-        <h3>
-          Nombre de la marca
-        </h3>
-
-        <p>
-          Moda artesanal mexicana con identidad propia.
-        </p>
-
-      </div>
-
-      <div>
-
-        <h3>
-          Explorar
-        </h3>
-
-        <ul>
-          <li><a href="#coleccion">Colección</a></li>
-          <li><a href="#historia">Historia</a></li>
-        </ul>
-
-      </div>
-
-      <div>
-
-        <h3>
-          Síguenos
-        </h3>
-
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
-        </ul>
-
-      </div>
-
-    </div>
-
-  </footer>
+    </footer>
 
 </body>
-```
+
+</html>
