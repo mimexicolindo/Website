@@ -1,400 +1,528 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moda Artesanal Mexicana</title>
 
-    <title>Modelos Únicos | Moda artesanal mexicana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <meta name="description"
-        content="Moda artesanal mexicana con diseños únicos, llenos de color e identidad.">
+<style>
 
-    <meta name="keywords"
-        content="ropa artesanal mexicana, moda mexicana, boutique, vestidos mexicanos, Campeche">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <meta name="author" content="Modelos Únicos">
+body{
+    font-family:'Fredoka',sans-serif;
+    background:#fff;
+    color:#333;
+    overflow-x:hidden;
+}
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Modelos Únicos">
-    <meta property="og:description"
-        content="Descubre prendas y accesorios con identidad mexicana.">
-    <meta property="og:type" content="website">
+img{
+    display:block;
+    width:100%;
+}
 
-    <!-- Tipografía -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+section{
+    width:100%;
+}
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="styles.css">
+/* HEADER */
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.png" type="image/png">
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    padding:24px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+}
+
+nav{
+    display:flex;
+    gap:32px;
+}
+
+nav a{
+    font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.35)
+    ),
+    url("https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377895/DSC09209_1_hulbff.webp");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:1000px;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:clamp(4rem,10vw,8rem);
+    line-height:.9;
+    margin-bottom:32px;
+}
+
+.hero p{
+    font-size:clamp(1.2rem,2vw,1.6rem);
+    margin-bottom:40px;
+}
+
+.btn{
+    display:inline-block;
+    background:#E4007C;
+    color:white;
+    padding:18px 36px;
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* ESSENCE */
+
+.editorial{
+    padding:120px 8%;
+}
+
+.editorial-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.editorial h2{
+    color:#E4007C;
+    font-size:clamp(3rem,7vw,5rem);
+    line-height:.9;
+    margin-bottom:32px;
+}
+
+.editorial p{
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+.editorial-image img{
+    border-radius:32px;
+}
+
+/* COLLECTIONS */
+
+.collections{
+    padding:120px 8%;
+    background:#FFF5FA;
+}
+
+.collections h2{
+    text-align:center;
+    font-size:clamp(3rem,6vw,5rem);
+    color:#001E62;
+    margin-bottom:60px;
+}
+
+.collection-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.collection-card{
+    background:white;
+    padding:50px 30px;
+    border-radius:32px;
+    text-align:center;
+    transition:.3s;
+}
+
+.collection-card:hover{
+    transform:translateY(-8px);
+}
+
+.collection-card h3{
+    font-size:2rem;
+    color:#E4007C;
+}
+
+/* SECOND EDITORIAL */
+
+.editorial.reverse .editorial-grid{
+    direction:rtl;
+}
+
+.editorial.reverse .editorial-text{
+    direction:ltr;
+}
+
+/* COLLAGE */
+
+.collage{
+    padding:120px 8%;
+}
+
+.collage h2{
+    text-align:center;
+    font-size:clamp(3rem,6vw,5rem);
+    color:#001E62;
+    margin-bottom:60px;
+}
+
+.masonry{
+    columns:3;
+    column-gap:24px;
+}
+
+.masonry img{
+    margin-bottom:24px;
+    border-radius:24px;
+}
+
+/* INSTAGRAM */
+
+.instagram{
+    padding:120px 8%;
+    text-align:center;
+    background:#001E62;
+    color:white;
+}
+
+.instagram h2{
+    font-size:clamp(3rem,6vw,5rem);
+    margin-bottom:24px;
+}
+
+.instagram p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.2rem;
+    margin-bottom:40px;
+}
+
+.instagram-btn{
+    background:#E4007C;
+}
+
+/* VISIT */
+
+.visit{
+    padding:120px 8%;
+}
+
+.visit-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.visit h2{
+    color:#001E62;
+    font-size:clamp(3rem,6vw,5rem);
+    margin-bottom:32px;
+}
+
+.visit-info{
+    font-size:1.2rem;
+    line-height:2;
+}
+
+.map{
+    min-height:400px;
+    border-radius:32px;
+    overflow:hidden;
+}
+
+/* FOOTER */
+
+footer{
+    background:#001E62;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .editorial-grid,
+    .visit-grid,
+    .collection-grid{
+        grid-template-columns:1fr;
+    }
+
+    .masonry{
+        columns:2;
+    }
+
+    nav{
+        display:none;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:4rem;
+    }
+
+    .masonry{
+        columns:1;
+    }
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <header>
+<header>
 
-        <div class="container">
+    <div class="logo">
+        Nombre de la marca
+    </div>
 
-            <div class="header-content">
+    <nav>
+        <a href="#">Colecciones</a>
+        <a href="#">Nuestra esencia</a>
+        <a href="#">Instagram</a>
+        <a href="#">Visítanos</a>
+    </nav>
 
-                <a href="index.html" class="logo">
-                    <img src="images/logo.svg" alt="Modelos Únicos">
-                </a>
+</header>
 
-                <nav>
-                    <a href="#coleccion">Colección</a>
-                    <a href="#historia">Historia</a>
-                    <a href="#instagram">Novedades</a>
-                    <a href="#ubicacion">Ubicación</a>
-                </nav>
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Moda artesanal mexicana.
+        </h1>
+
+        <p>
+            Diseños únicos para personas que buscan algo diferente.
+        </p>
+
+        <a href="#" class="btn">
+            Explorar colección
+        </a>
+
+    </div>
+
+</section>
+
+<section class="editorial">
+
+    <div class="editorial-grid">
+
+        <div class="editorial-image">
+
+            <img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773376344/DSC09117-1_klw12j.webp">
+
+        </div>
+
+        <div class="editorial-text">
+
+            <h2>
+                Cada pieza cuenta una historia.
+            </h2>
+
+            <p>
+                Creemos en la moda como una forma de expresión, identidad y orgullo cultural. Nuestra propuesta reúne diseño contemporáneo con la riqueza artesanal mexicana.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="collections">
+
+    <h2>
+        Explora nuestras colecciones
+    </h2>
+
+    <div class="collection-grid">
+
+        <div class="collection-card">
+            <h3>Vestidos</h3>
+        </div>
+
+        <div class="collection-card">
+            <h3>Blusas y conjuntos</h3>
+        </div>
+
+        <div class="collection-card">
+            <h3>Bolsos artesanales</h3>
+        </div>
+
+        <div class="collection-card">
+            <h3>Accesorios</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="editorial reverse">
+
+    <div class="editorial-grid">
+
+        <div class="editorial-image">
+
+            <img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773376345/DSC09656-1_yq92xr.webp">
+
+        </div>
+
+        <div class="editorial-text">
+
+            <h2>
+                Diseñado para destacar.
+            </h2>
+
+            <p>
+                Celebramos el color, la autenticidad y la individualidad a través de piezas que no siguen tendencias pasajeras.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="collage">
+
+    <h2>
+        Inspiración artesanal
+    </h2>
+
+    <div class="masonry">
+
+        <img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773376345/DSC09403-1_gqmvkf.webp">
+
+        <img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773376345/DSC09592_a3dwry.webp">
+
+        <img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773376345/DSC09182-1_z6n0ws.webp">
+
+        <img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773376344/DSC05879-1_bkyfyy.webp">
+
+        <img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773376344/DSC05658-1_tvlz78.webp">
+
+    </div>
+
+</section>
+
+<section class="instagram">
+
+    <h2>
+        Síguenos en Instagram
+    </h2>
+
+    <p>
+        Descubre nuevas piezas, lanzamientos y contenido exclusivo.
+    </p>
+
+    <a href="#" class="btn instagram-btn">
+        Ver Instagram
+    </a>
+
+</section>
+
+<section class="visit">
+
+    <div class="visit-grid">
+
+        <div>
+
+            <h2>
+                Visítanos
+            </h2>
+
+            <div class="visit-info">
+
+                Dirección:<br>
+                Calle Ejemplo 123, Mérida, Yucatán.<br><br>
+
+                Horario:<br>
+                Lunes a sábado · 10:00 AM – 7:00 PM.<br><br>
+
+                WhatsApp:<br>
+                +52 999 000 0000
 
             </div>
 
         </div>
 
-    </header>
-
-
-    <main>
-
-        <!-- HERO -->
-        <section class="hero">
-
-            <div class="container">
-
-                <div class="hero-content">
-
-                    <p class="small text-white">
-                        Moda artesanal mexicana
-                    </p>
-
-                    <h1>
-                        Color que cuenta historias.
-                    </h1>
-
-                    <p>
-                        Diseños inspirados en la riqueza cultural de México,
-                        creados para personas que buscan autenticidad.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#coleccion" class="btn btn-primary">
-                            Explorar colección
-                        </a>
-
-                        <a href="#ubicacion" class="btn btn-secondary">
-                            Visítanos
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- COLECCIÓN -->
-        <section id="coleccion">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <p class="text-pink">
-                        Colección destacada
-                    </p>
-
-                    <h2>
-                        Diseños únicos para personas únicas.
-                    </h2>
-
-                </div>
-
-
-                <div class="card-grid card-grid-3">
-
-                    <article class="card">
-
-                        <img src="images/producto-1.webp" alt="Vestidos">
-
-                        <div class="card-content">
-
-                            <h3>Vestidos</h3>
-
-                            <p>
-                                Siluetas contemporáneas inspiradas en la tradición mexicana.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <img src="images/producto-2.webp" alt="Blusas">
-
-                        <div class="card-content">
-
-                            <h3>Blusas</h3>
-
-                            <p>
-                                Prendas llenas de color para cualquier ocasión.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <img src="images/producto-3.webp" alt="Accesorios">
-
-                        <div class="card-content">
-
-                            <h3>Accesorios</h3>
-
-                            <p>
-                                Complementos que reflejan identidad y creatividad.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- HISTORIA -->
-        <section id="historia" class="bg-cream">
-
-            <div class="container center">
-
-                <p class="text-pink">
-                    Nuestra historia
-                </p>
-
-                <h2>
-                    México se viste de color.
-                </h2>
-
-                <p>
-                    Creemos que la moda puede ser una expresión de identidad,
-                    tradición y orgullo por nuestras raíces.
-                </p>
-
-                <p>
-                    Mientras muchos siguen tendencias pasajeras,
-                    nosotros apostamos por diseños llenos de personalidad
-                    y autenticidad.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- DIFERENCIADORES -->
-        <section>
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <p class="text-pink">
-                        ¿Por qué elegirnos?
-                    </p>
-
-                    <h2>
-                        Mucho más que ropa.
-                    </h2>
-
-                </div>
-
-
-                <div class="card-grid card-grid-3">
-
-                    <div class="card">
-
-                        <div class="card-content center">
-
-                            <h3>Diseño auténtico</h3>
-
-                            <p>
-                                Piezas con identidad mexicana y visión contemporánea.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="card">
-
-                        <div class="card-content center">
-
-                            <h3>Modelos únicos</h3>
-
-                            <p>
-                                Constantemente incorporamos nuevas colecciones.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="card">
-
-                        <div class="card-content center">
-
-                            <h3>Experiencia cercana</h3>
-
-                            <p>
-                                Atención personalizada para ayudarte a encontrar tu estilo.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- INSTAGRAM -->
-        <section id="instagram" class="newsletter">
-
-            <div class="container center">
-
-                <p>
-                    Nuestros modelos más recientes aparecen primero aquí.
-                </p>
-
-                <h2>
-                    Síguenos en Instagram.
-                </h2>
-
-                <a href="#" class="btn btn-primary">
-                    Ver Instagram
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- UBICACIÓN -->
-        <section id="ubicacion">
-
-            <div class="container center">
-
-                <p class="text-pink">
-                    Visítanos
-                </p>
-
-                <h2>
-                    Te esperamos en Campeche.
-                </h2>
-
-                <p>
-                    Descubre nuestras piezas en persona y encuentra el diseño ideal para ti.
-                </p>
-
-                <a href="#" class="btn btn-primary">
-                    Cómo llegar
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <div>
-
-                    <h3>
-                        Modelos Únicos
-                    </h3>
-
-                    <p>
-                        Moda artesanal mexicana con identidad propia.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Explorar
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            <a href="#coleccion">Colección</a>
-                        </li>
-
-                        <li>
-                            <a href="#historia">Historia</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Redes sociales
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            <a href="#">Instagram</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Facebook</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
+        <div class="map">
+
+            <iframe
+            src="https://maps.google.com/maps?q=M%C3%A9rida&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;">
+            </iframe>
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
+
+<footer>
+
+    © 2026 Nombre de la marca · Moda artesanal mexicana.
+
+</footer>
 
 </body>
-
 </html>
