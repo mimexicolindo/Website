@@ -1,300 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mexican Clothing Store</title>
+
+<title>Nombre de la Marca</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:#222;
-    line-height:1.6;
+font-family:'Inter',sans-serif;
+background:white;
+color:#111;
 }
 
-header{
-    background:#fff;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    border-bottom:1px solid #eee;
-}
-
-.logo{
-    font-size:1.5rem;
-    font-weight:bold;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:30px 60px;
+display:flex;
+justify-content:space-between;
+z-index:100;
+mix-blend-mode:difference;
 }
 
 nav a{
-    text-decoration:none;
-    color:#222;
-    font-weight:500;
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:.9rem;
+letter-spacing:1px;
+}
+
+.logo{
+color:white;
+font-weight:500;
+letter-spacing:3px;
 }
 
 .hero{
-    height:80vh;
-    background:url('hero-image.jpg') center center/cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    position:relative;
-}
-
-.hero::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.45);
+height:100vh;
+background:url("hero.jpg") center center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
 .hero-content{
-    position:relative;
-    z-index:1;
-    max-width:700px;
-    padding:20px;
+color:white;
 }
 
 .hero h1{
-    font-size:3rem;
-    margin-bottom:15px;
+font-family:'Cormorant Garamond',serif;
+font-size:7rem;
+font-weight:300;
+line-height:1;
 }
 
 .hero p{
-    font-size:1.2rem;
+margin-top:20px;
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:.85rem;
 }
 
-section{
-    padding:80px 8%;
+.section{
+padding:120px 8%;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-    font-size:2rem;
+.title{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+font-weight:300;
+margin-bottom:60px;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+.arrivals{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
 }
 
-.card{
-    background:#f7f7f7;
-    border-radius:10px;
-    overflow:hidden;
+.arrivals img{
+width:100%;
+height:700px;
+object-fit:cover;
 }
 
-.card img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:20px;
-}
-
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
-
-.catalog{
-    text-align:center;
-    background:#fafafa;
-}
-
-.button{
-    display:inline-block;
-    margin-top:20px;
-    padding:14px 28px;
-    background:#e91e63;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
+.story{
+max-width:700px;
+font-size:1.15rem;
+line-height:1.8;
 }
 
 .visit{
-    text-align:center;
+display:grid;
+grid-template-columns:1.5fr 1fr;
+gap:60px;
+align-items:center;
 }
 
-.map{
-    margin-top:25px;
-    width:100%;
-    height:400px;
-    border:none;
+.visit img{
+width:100%;
+height:650px;
+object-fit:cover;
 }
 
-.contact-form{
-    max-width:700px;
-    margin:auto;
+.address h3{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+font-weight:300;
+margin-bottom:20px;
 }
 
-.contact-form input,
-.contact-form textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:15px;
-    border:1px solid #ddd;
+.address p{
+margin-bottom:12px;
 }
 
-.contact-form button{
-    padding:15px 25px;
-    border:none;
-    background:#e91e63;
-    color:white;
-    cursor:pointer;
+.catalog{
+text-align:center;
+background:#f8f8f8;
+padding:140px 20px;
+}
+
+.catalog h2{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+font-weight:300;
+margin-bottom:20px;
+}
+
+.catalog a{
+display:inline-block;
+margin-top:30px;
+padding:18px 45px;
+border:1px solid black;
+text-decoration:none;
+color:black;
+transition:.3s;
+}
+
+.catalog a:hover{
+background:black;
+color:white;
+}
+
+.instagram{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.instagram img{
+width:100%;
+aspect-ratio:1;
+object-fit:cover;
 }
 
 footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:30px;
+padding:80px;
+text-align:center;
+border-top:1px solid #eee;
 }
 
-@media(max-width:768px){
-    nav ul{
-        gap:15px;
-        font-size:.9rem;
-    }
+@media(max-width:900px){
 
-    .hero h1{
-        font-size:2rem;
-    }
+.hero h1{
+font-size:4rem;
 }
+
+.arrivals,
+.visit{
+grid-template-columns:1fr;
+}
+
+.arrivals img{
+height:500px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">IAMS</div>
+<nav>
+<div class="logo">MARCA</div>
 
-    <nav>
-        <ul>
-            <li><a href="#new">New Arrivals</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#visit">Visit Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<div>
+<a href="#new">NUEVO</a>
+<a href="#story">NOSOTROS</a>
+<a href="#visit">VISÍTANOS</a>
+</div>
+</nav>
 
 <section class="hero">
-    <div class="hero-content">
-        <h1>Mexican Fashion with Character</h1>
-        <p>Discover unique collections inspired by style, culture and authenticity.</p>
-    </div>
+
+<div class="hero-content">
+<h1>MARCA</h1>
+<p>Nueva Colección 2026</p>
+</div>
+
 </section>
 
-<section id="new">
-    <h2 class="section-title">Just Arrived</h2>
+<section class="section" id="new">
 
-    <div class="cards">
+<h2 class="title">Recién Llegó</h2>
 
-        <div class="card">
-            <img src="product1.jpg" alt="">
-            <div class="card-content">
-                <h3>New Collection</h3>
-                <p>Latest pieces now available in store.</p>
-            </div>
-        </div>
+<div class="arrivals">
 
-        <div class="card">
-            <img src="product2.jpg" alt="">
-            <div class="card-content">
-                <h3>Season Favorites</h3>
-                <p>Discover what's trending this season.</p>
-            </div>
-        </div>
+<img src="look1.jpg">
+<img src="look2.jpg">
 
-        <div class="card">
-            <img src="product3.jpg" alt="">
-            <div class="card-content">
-                <h3>Limited Pieces</h3>
-                <p>Selected items available for a short time.</p>
-            </div>
-        </div>
+</div>
 
-    </div>
 </section>
 
-<section id="about">
-    <div class="about">
-        <h2 class="section-title">About Us</h2>
+<section class="section" id="story">
 
-        <p>
-            We are a Mexican clothing store focused on bringing carefully selected
-            fashion, quality garments and styles that help our customers express
-            their personality.
-        </p>
-    </div>
+<h2 class="title">Nuestra Esencia</h2>
+
+<p class="story">
+
+Moda seleccionada para quienes buscan vestir con personalidad.
+Prendas, accesorios y colecciones que evolucionan constantemente para reflejar las tendencias actuales sin perder autenticidad.
+
+</p>
+
+</section>
+
+<section class="section" id="visit">
+
+<div class="visit">
+
+<img src="store.jpg">
+
+<div class="address">
+
+<h3>Visítanos</h3>
+
+<p>📍 Calle Principal 123</p>
+
+<p>Mérida, Yucatán</p>
+
+<p>Lunes a Sábado</p>
+
+<p>10:00 AM – 8:00 PM</p>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="catalog">
-    <h2 class="section-title">Catalog</h2>
 
-    <p>
-        Explore our latest collections and available products.
-    </p>
+<h2>Explora la Colección</h2>
 
-    <a href="catalog.pdf" class="button" download>
-        Download Catalog
-    </a>
+<p>Descarga el catálogo más reciente.</p>
+
+<a href="catalogo.pdf">
+Descargar Catálogo
+</a>
+
 </section>
 
-<section id="visit" class="visit">
-    <h2 class="section-title">Visit Us</h2>
+<section class="section">
 
-    <p>
-        Come experience our collections in person.
-    </p>
+<h2 class="title">Instagram</h2>
 
-    <iframe
-        class="map"
-        src=""
-        loading="lazy">
-    </iframe>
-</section>
+<div class="instagram">
 
-<section id="contact">
-    <h2 class="section-title">Contact</h2>
+<img src="ig1.jpg">
+<img src="ig2.jpg">
+<img src="ig3.jpg">
+<img src="ig4.jpg">
+<img src="ig5.jpg">
+<img src="ig6.jpg">
 
-    <form class="contact-form">
+</div>
 
-        <input type="text" placeholder="Name">
-
-        <input type="email" placeholder="Email">
-
-        <textarea rows="6" placeholder="Message"></textarea>
-
-        <button type="submit">Send Message</button>
-
-    </form>
 </section>
 
 <footer>
-    <p>© 2026 IAMS. All rights reserved.</p>
+
+MARCA · MÉXICO
+
 </footer>
 
 </body>
