@@ -1,383 +1,301 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hero Gallery - Modelos Únicos</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700;800&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<title>Mexican Clothing Store</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#faf7f4;
-font-family:Montserrat,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
+    line-height:1.6;
 }
 
-.demo-title{
-padding:40px;
-background:#001f5b;
-color:white;
-font-size:40px;
-font-weight:800;
-text-align:center;
+header{
+    background:#fff;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    border-bottom:1px solid #eee;
 }
 
-.demo-label{
-padding:20px;
-background:#e91e63;
-color:white;
-font-size:22px;
-font-weight:700;
-text-align:center;
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+    font-weight:500;
 }
 
 .hero{
-height:100vh;
-position:relative;
-overflow:hidden;
+    height:80vh;
+    background:url('hero-image.jpg') center center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
 }
 
-.hero img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
 }
 
-.content{
-position:absolute;
-z-index:3;
-}
-
-.btn{
-display:inline-block;
-padding:14px 28px;
-background:#e91e63;
-color:white;
-text-decoration:none;
-border-radius:999px;
-font-weight:700;
-margin-top:20px;
-}
-
-.overlay-dark{
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.35);
-z-index:1;
-}
-
-.overlay-light{
-position:absolute;
-inset:0;
-background:linear-gradient(to right,rgba(255,255,255,.92),rgba(255,255,255,.1));
-z-index:1;
+.hero-content{
+    position:relative;
+    z-index:1;
+    max-width:700px;
+    padding:20px;
 }
 
 .hero h1{
-line-height:1;
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.2rem;
+}
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:2rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#f7f7f7;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.catalog{
+    text-align:center;
+    background:#fafafa;
+}
+
+.button{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    background:#e91e63;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+.visit{
+    text-align:center;
+}
+
+.map{
+    margin-top:25px;
+    width:100%;
+    height:400px;
+    border:none;
+}
+
+.contact-form{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+}
+
+.contact-form button{
+    padding:15px 25px;
+    border:none;
+    background:#e91e63;
+    color:white;
+    cursor:pointer;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
 }
 
 @media(max-width:768px){
+    nav ul{
+        gap:15px;
+        font-size:.9rem;
+    }
 
-.hero{
-height:90vh;
+    .hero h1{
+        font-size:2rem;
+    }
 }
-
-.hero h1{
-font-size:48px!important;
-}
-
-}
-
 </style>
 </head>
+
 <body>
 
-<div class="demo-title">
-15 HERO CONCEPTS · MODELOS ÚNICOS
-</div>
+<header>
+    <div class="logo">IAMS</div>
 
-<!-- HERO 01 -->
-
-<div class="demo-label">HERO 01 · Editorial Vogue</div>
-
-<section class="hero">
-
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377895/DSC09209_1_hulbff.webp">
-
-<div class="overlay-dark"></div>
-
-<div class="content" style="left:8%;bottom:10%;color:white;max-width:650px;">
-<h1 style="font-size:96px;font-family:Playfair Display;">Moda Artesanal</h1>
-<p style="font-size:22px;margin-top:20px;">
-Diseños únicos hechos en Campeche.
-</p>
-<a href="#" class="btn">Explorar</a>
-</div>
-
-</section>
-
-<!-- HERO 02 -->
-
-<div class="demo-label">HERO 02 · Rosa Mexicano</div>
+    <nav>
+        <ul>
+            <li><a href="#new">New Arrivals</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#visit">Visit Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
 <section class="hero">
-
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377850/DSC05754-1_cmr47p.webp">
-
-<div style="position:absolute;inset:0;background:rgba(233,30,99,.35);"></div>
-
-<div class="content" style="left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;color:white;width:90%;">
-<h1 style="font-size:110px;font-family:Fredoka;">
-MODELOS
-ÚNICOS
-</h1>
-</div>
-
+    <div class="hero-content">
+        <h1>Mexican Fashion with Character</h1>
+        <p>Discover unique collections inspired by style, culture and authenticity.</p>
+    </div>
 </section>
 
-<!-- HERO 03 -->
+<section id="new">
+    <h2 class="section-title">Just Arrived</h2>
 
-<div class="demo-label">HERO 03 · Split Layout</div>
+    <div class="cards">
 
-<section class="hero" style="display:grid;grid-template-columns:1fr 1fr;">
+        <div class="card">
+            <img src="product1.jpg" alt="">
+            <div class="card-content">
+                <h3>New Collection</h3>
+                <p>Latest pieces now available in store.</p>
+            </div>
+        </div>
 
-<div style="background:#001f5b;color:white;display:flex;align-items:center;padding:8%;">
-<div>
-<h1 style="font-size:90px;font-family:Fredoka;">
-Campeche
-</h1>
-<p style="font-size:22px;margin-top:20px;">
-Moda artesanal mexicana.
-</p>
-</div>
-</div>
+        <div class="card">
+            <img src="product2.jpg" alt="">
+            <div class="card-content">
+                <h3>Season Favorites</h3>
+                <p>Discover what's trending this season.</p>
+            </div>
+        </div>
 
-<div>
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377895/DSC09209_1_hulbff.webp">
-</div>
+        <div class="card">
+            <img src="product3.jpg" alt="">
+            <div class="card-content">
+                <h3>Limited Pieces</h3>
+                <p>Selected items available for a short time.</p>
+            </div>
+        </div>
 
+    </div>
 </section>
 
-<!-- HERO 04 -->
+<section id="about">
+    <div class="about">
+        <h2 class="section-title">About Us</h2>
 
-<div class="demo-label">HERO 04 · Minimal Luxury</div>
-
-<section class="hero">
-
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377850/DSC05754-1_cmr47p.webp">
-
-<div class="overlay-light"></div>
-
-<div class="content" style="left:8%;top:50%;transform:translateY(-50%);max-width:550px;">
-<h1 style="font-size:80px;color:#001f5b;font-family:Playfair Display;">
-Colección
-2026
-</h1>
-</div>
-
+        <p>
+            We are a Mexican clothing store focused on bringing carefully selected
+            fashion, quality garments and styles that help our customers express
+            their personality.
+        </p>
+    </div>
 </section>
 
-<!-- HERO 05 -->
+<section class="catalog">
+    <h2 class="section-title">Catalog</h2>
 
-<div class="demo-label">HERO 05 · Full Color</div>
+    <p>
+        Explore our latest collections and available products.
+    </p>
 
-<section class="hero" style="background:#e91e63;color:white;display:flex;align-items:center;justify-content:center;">
-
-<div style="text-align:center;">
-<h1 style="font-size:120px;font-family:Fredoka;">
-México
-</h1>
-<p style="font-size:30px;">
-Artesanía que destaca.
-</p>
-</div>
-
+    <a href="catalog.pdf" class="button" download>
+        Download Catalog
+    </a>
 </section>
 
-<!-- HERO 06 -->
+<section id="visit" class="visit">
+    <h2 class="section-title">Visit Us</h2>
 
-<div class="demo-label">HERO 06 · Magazine</div>
+    <p>
+        Come experience our collections in person.
+    </p>
 
-<section class="hero">
-
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377895/DSC09209_1_hulbff.webp">
-
-<div style="position:absolute;right:0;top:0;width:40%;height:100%;background:white;"></div>
-
-<div class="content" style="right:5%;top:50%;transform:translateY(-50%);width:30%;">
-<h1 style="font-size:70px;color:#001f5b;">
-Moda
-Mexicana
-</h1>
-</div>
-
+    <iframe
+        class="map"
+        src=""
+        loading="lazy">
+    </iframe>
 </section>
 
-<!-- HERO 07 -->
+<section id="contact">
+    <h2 class="section-title">Contact</h2>
 
-<div class="demo-label">HERO 07 · Bold Typography</div>
+    <form class="contact-form">
 
-<section class="hero">
+        <input type="text" placeholder="Name">
 
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377850/DSC05754-1_cmr47p.webp">
+        <input type="email" placeholder="Email">
 
-<div class="overlay-dark"></div>
+        <textarea rows="6" placeholder="Message"></textarea>
 
-<div class="content" style="left:50%;top:50%;transform:translate(-50%,-50%);">
-<h1 style="font-size:140px;color:white;font-family:Fredoka;">
-MU
-</h1>
-</div>
+        <button type="submit">Send Message</button>
 
+    </form>
 </section>
 
-<!-- HERO 08 -->
-
-<div class="demo-label">HERO 08 · Modern Card</div>
-
-<section class="hero">
-
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377895/DSC09209_1_hulbff.webp">
-
-<div class="content" style="left:8%;bottom:8%;background:white;padding:50px;border-radius:30px;">
-<h1 style="font-size:60px;color:#001f5b;">
-Modelos Únicos
-</h1>
-</div>
-
-</section>
-
-<!-- HERO 09 -->
-
-<div class="demo-label">HERO 09 · Azul Profundo</div>
-
-<section class="hero" style="background:#001f5b;display:flex;align-items:center;justify-content:center;">
-
-<div style="text-align:center;color:white;">
-<h1 style="font-size:100px;">
-Campeche
-</h1>
-</div>
-
-</section>
-
-<!-- HERO 10 -->
-
-<div class="demo-label">HERO 10 · Overlay Rosa</div>
-
-<section class="hero">
-
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377850/DSC05754-1_cmr47p.webp">
-
-<div style="position:absolute;inset:0;background:linear-gradient(45deg,#e91e63aa,#001f5bcc);"></div>
-
-<div class="content" style="left:10%;bottom:10%;color:white;">
-<h1 style="font-size:90px;">
-Colección
-Artesanal
-</h1>
-</div>
-
-</section>
-
-<!-- HERO 11 -->
-
-<div class="demo-label">HERO 11 · Editorial White</div>
-
-<section class="hero" style="background:white;display:grid;grid-template-columns:1fr 1fr;">
-
-<div style="display:flex;align-items:center;padding:8%;">
-<h1 style="font-size:90px;color:#001f5b;">
-Hecho
-en México
-</h1>
-</div>
-
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377895/DSC09209_1_hulbff.webp">
-
-</section>
-
-<!-- HERO 12 -->
-
-<div class="demo-label">HERO 12 · Banner Central</div>
-
-<section class="hero">
-
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377850/DSC05754-1_cmr47p.webp">
-
-<div class="content" style="top:50%;left:50%;transform:translate(-50%,-50%);background:white;padding:40px 70px;">
-<h1 style="font-size:60px;color:#001f5b;">
-MODELOS ÚNICOS
-</h1>
-</div>
-
-</section>
-
-<!-- HERO 13 -->
-
-<div class="demo-label">HERO 13 · Fashion House</div>
-
-<section class="hero">
-
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377895/DSC09209_1_hulbff.webp">
-
-<div class="overlay-dark"></div>
-
-<div class="content" style="left:8%;top:12%;color:white;">
-<h1 style="font-size:100px;">
-MU
-</h1>
-</div>
-
-</section>
-
-<!-- HERO 14 -->
-
-<div class="demo-label">HERO 14 · Contemporary</div>
-
-<section class="hero">
-
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377850/DSC05754-1_cmr47p.webp">
-
-<div class="content" style="right:8%;bottom:10%;background:#001f5b;color:white;padding:50px;">
-<h1 style="font-size:60px;">
-Arte
-Vestible
-</h1>
-</div>
-
-</section>
-
-<!-- HERO 15 -->
-
-<div class="demo-label">HERO 15 · Premium Brand</div>
-
-<section class="hero">
-
-<img src="https://res.cloudinary.com/dwcxmpe9g/image/upload/v1773377895/DSC09209_1_hulbff.webp">
-
-<div class="overlay-dark"></div>
-
-<div class="content" style="left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;color:white;">
-<h1 style="font-size:110px;font-family:Playfair Display;">
-Modelos
-Únicos
-</h1>
-<p style="font-size:24px;margin-top:20px;">
-Moda artesanal mexicana
-</p>
-</div>
-
-</section>
+<footer>
+    <p>© 2026 IAMS. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
